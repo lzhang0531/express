@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "supervisor ./bin/www"
+    "devp": "set NODE_ENV=development&& supervisor ./bin/www",
+    "test": "set NODE_ENV=test&& supervisor ./bin/www",
+    "prod": "set NODE_ENV=prod&& supervisor ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
+    "config-lite": "^2.1.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.5.2",
